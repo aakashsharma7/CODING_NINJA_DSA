@@ -1,0 +1,39 @@
+public class ComplexNumbers {
+	// Complete this class
+    private int real;
+    private int imaginary;
+    
+    public ComplexNumbers(int real,int imaginary)
+    {       
+    this.real=real;
+    this.imaginary=imaginary;
+    }
+
+    public void plus(ComplexNumbers c2)
+    {
+        this.real=this.real+c2.real;
+        this.imaginary=this.imaginary+c2.imaginary;
+    }
+    
+    public void multiply(ComplexNumbers c2)
+    {    int  a;
+           
+         a=(this.real*c2.real)-(this.imaginary*c2.imaginary);
+         
+        this.imaginary=(this.real*c2.imaginary)+(c2.real*this.imaginary);
+         this.real=a;  
+      
+    }
+
+    
+    public void print()
+    {    String s;
+        System.out.print(this.real+" ");
+        s=(imaginary>=0)?"+ ":"- ";
+        System.out.print(s+"i"+this.imaginary);
+    }
+
+    
+
+
+}
